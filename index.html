@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>時鐘</title>
+    <script>
+        function createClock() {
+            // 取得當前時間
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // 格式化時間
+            var timeString = hours + ":" + minutes + ":" + seconds;
+
+            // 創建時鐘元素
+            var clock = document.createElement("div");
+            clock.textContent = "現在時間：" + timeString;
+            clock.style.fontSize = "24px";
+            clock.style.marginTop = "20px";
+
+            // 將時鐘元素加入到網頁中
+            document.body.appendChild(clock);
+        }
+    </script>
+</head>
+<body>
+    <h1>時鐘創建器</h1>
+    <button onclick="createClock()">按我創建時鐘</button>
+</body>
+</html>
